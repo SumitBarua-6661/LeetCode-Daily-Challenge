@@ -4,7 +4,6 @@
 
 // ## Function
 
-```javascript
 var calculateScore = function(instructions, values) {
     let n = instructions.length;
     let score = 0;
