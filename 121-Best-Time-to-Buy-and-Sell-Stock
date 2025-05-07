@@ -1,0 +1,22 @@
+/**
+ * Function to calculate the maximum profit from stock prices.
+ * Given an array where each element represents the stock price on a given day,
+ * this function returns the maximum profit that can be achieved by 
+ * buying on one day and selling on another later day.
+ *
+ * @param {number[]} prices - Array of stock prices.
+ * @return {number} Maximum possible profit.
+ */
+
+var maxProfit = function(prices) {
+    let min = prices[0];
+    let maxProfit = 0;
+    for(let i = 0 ; i<prices.length;i++){
+        if(min>prices[i]){
+            min = prices[i];
+        }
+        let profit = prices[i]-min;
+        maxProfit = Math.max(maxProfit,profit);
+    }
+    return maxProfit;
+};
